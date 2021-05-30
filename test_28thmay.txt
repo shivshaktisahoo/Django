@@ -1,0 +1,20 @@
+{'Elements ': [13, 14], 'reverse_sum': 27}
+{'Elements ': [1400, 12], 'reverse_sum': 26}
+{'Elements ': [50, 500], 'reverse_sum': 1}
+{'Elements ': [34, 5], 'reverse_sum': 84}
+{'Elements ': [34, 34], 'reverse_sum': 68}
+{'Elements ': [23, 57], 'reverse_sum': 701}
+{'Elements ': [78, 78], 'reverse_sum': 471}
+{'Elements ': [45, 12], 'reverse_sum': 57}
+{'Elements ': [98090, 65], 'reverse_sum': 5419}
+{'Elements ': [656, 89], 'reverse_sum': 457}
+I am appending now again for above blocks{'Elements ': [90, 9], 'reverse_sum': 81}
+{'Elements ': [43, 565], 'reverse_sum': 995}
+{'Elements ': [80, 3], 'reverse_sum': 11}
+{'Elements ': [233, 66], 'reverse_sum': 893}
+{'Elements ': [78, 34], 'reverse_sum': 31}
+{'Elements ': [35, 67], 'reverse_sum': 921}
+{'Elements ': [76, 23], 'reverse_sum': 99}
+{'Elements ': [86, 23], 'reverse_sum': 1}
+{'Elements ': [78, 23], 'reverse_sum': 911}
+{'Elements ': [35, 23], 'reverse_sum': 58}
