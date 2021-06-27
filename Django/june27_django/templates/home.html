@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC School</title>
+    <style>
+        label { font-size: 150%;}
+    </style>
+</head>
+<body>
+    <!-- <center><img src="abcschool.jpg" alt="ABC School" width="200" height="200"></center> -->
+   <h1 style="color:indigo; text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;"><u> Welcome to ABC SCHOOL </u></h1>
+   <hr><br>
+   <form action="{% url 'about' %}">
+        <label>Student Name:</label>&#8287;
+        <input type="text" name='name' placeholder="Enter your Name"><br><br><br>
+        <p style="font-size: 150%;"><b>Enter Your Marks:</b></p>
+        <label>Science:</label>&#8287;
+        <input type="number" name='mark1' placeholder="Enter Science mark"><br><br>
+        <label>Maths:</label>&#8287;&#8287;
+        <input type="number" name='mark2' placeholder="Enter Maths mark"><br><br>
+        <label>English:</label>&#8287;&#8287;
+        <input type="number" name='mark3' placeholder="Enter English mark"><br><br>
+        <label>Social Science:</label>&#8287;&#8287;
+        <input type="number" name='mark4' placeholder="Enter SocialScience mark"><br><br>
+        <button type='sumbit' style="background-color:rgb(77, 246, 86);">SAVE</button>
+    </form>
+</body>
+</html>
