@@ -1,1 +1,0 @@
-{'detail': {101: {'Name': 'Rohit', 'Balance': 20000}, 102: {'Name': 'Shiv', 'Balance': 70000}, 103: {'Name': 'Deepesh', 'Balance': 991000}}, 'auth': {101: '101', 102: '102', 103: '103'}}
