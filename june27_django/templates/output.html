@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Output - Page</title>
+    <style>
+        td { text-align : center;}
+    </style>
+</head>
+
+<body>
+   
+    
+    <div style="background-color: rgb(247, 250, 206);">
+        <!-- both the ways we can load image -->
+        <center><img src="{% static 'images/abcschool.jpg' %}" alt="ABC School" width="150" height="150"></center>
+        <!-- <center><img src="static/images/abcschool.jpg" alt="ABC School" width="200" height="200"></center> -->
+       
+        <h1 style="color:indigo; text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;"><u>ABC SCHOOL</u></h1>
+        <br> <hr>   
+    </div>
+ 
+    <h2>Student name: {{name}}</h2>
+    <center>
+    <table class="table" border="2" cellpadding="8" bordercolor="black" bgcolor="Black" cellspacing="0" width="800" height="400" style="font-size:18px;">
+        <caption><h2>REPORT CARD</h2></caption>
+        <thead>
+            <tr bgcolor="orange">
+                <th>Sl.No.</th>
+                <th>Subject</th>
+                <th>Marks</th>
+                <!-- <th scope="col">Handle</th> -->
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Optional JavaScript; choose one of the two! -->
+            {% for i,j in marks %}
+
+            <tr bgcolor="lightyellow">
+                <th scope="row">{{forloop.counter}}</th>
+                <td >{{i}}</td>
+                <td>{{j}}</td>
+
+            </tr>
+            {% endfor %}
+            </tbody>
+            
+            <tfoot>
+                <tr bgcolor="lightyellow">
+                    <th>Total Marks:</th>
+                    <td><b>400</b></td>
+                    <td></td>
+                </tr>
+                <tr bgcolor="lightyellow">
+                    <th colspan="2">Obtained Marks :</th>
+                    <td style="color:rgb(1, 136, 12)"><b>{{total}}</b></td>  
+                </tr>
+                <tr bgcolor="lightyellow">
+                    <th colspan="2">Division :</th>
+                    <td style="color:rgb(15, 36, 17)"><b>{{division}}</b></td>
+                </tr>
+                <tr bgcolor="lightyellow">
+                    <th colspan="2">Percentage :</th>
+                    <td style="color:rgb(1, 136, 12)"><b>{{per}} %</b></td>
+                </tr>
+                
+            </tfoot>
+     
+    </table>
+  
+    </center>
+
+</body>
+
+</html>
