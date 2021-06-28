@@ -1,1 +1,0 @@
-{'English': 98, 'Social': 67, 'Science': 78, 'Total': 243, 'Percentage': 81.0}
