@@ -1,0 +1,27 @@
+{% extends 'base.html'%} 
+
+<!-- title -->
+{% block title %} ABC: contact page {% endblock %}
+
+
+<!-- Body content -->
+{% block content %}
+    <h1>Contact page</h1>
+    <form action="{% url 'contact' %}">
+        <label for="fname">First Name </label>
+        <input type="text" name="fname" minlength="5" maxlength="50" placeholder="First Name" autofocus required>
+        <br><br>
+        <label for="lname">Last Name </label>
+        <input type="text" name="lname" minlength="5" maxlength="50" placeholder="Last  Name" required>
+        <br><br>
+        <label for="gender">Gender :</label>&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="gender" value="Male">Male
+        <input type="radio" name="gender" value="Female">Female
+        <br><br>
+        
+  
+        <label for="desc">Description</label>
+        <textarea name="addr" rows="5" cols="50" placeholder="Description"></textarea>
+       <center><button type="submit"  style="background-color:rgb(77, 246, 86);">SUBMIT</button></center>
+        </form>
+{% endblock %}

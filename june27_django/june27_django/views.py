@@ -3,6 +3,18 @@ from django.shortcuts import render
 
 
 def home(request):
+    return render(request, 'home.html')
+
+
+def about(request):
+    print("about is called")
+    return render(request, 'about.html')
+
+def contact(request):
+    return render(request, 'contact.html')
+
+
+def student(request):
     try:
         data = request.GET
         name = data['name']
@@ -30,14 +42,4 @@ def home(request):
         return render(request, 'output.html', context)
     except:
         pass
-
-    return render(request, 'home.html')
-
-
-def about(request):
-    print("about is called")
-    return render(request, 'home.html')
-
-
-
-
+    return render(request, 'student.html')

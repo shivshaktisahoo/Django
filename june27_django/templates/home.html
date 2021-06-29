@@ -1,41 +1,31 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABC School</title>
-    <style>
-        label { font-size: 150%;}
-    </style>
-</head>
-<body>
-    <div style="background-color: rgb(247, 250, 206);">
-    <!-- both the ways we can load image -->
-    <center><img src="{% static 'images/abcschool.jpg' %}" alt="ABC School" width="150" height="150"></center>
-    <!-- <center><img src="static/images/abcschool.jpg" alt="ABC School" width="200" height="200"></center> -->
-   
-    <h1 style="color:indigo; text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;"><u> Welcome to ABC SCHOOL </u></h1>
-    <br> 
-    <hr>   
-</div>
-<div bgcolor="lightyellow">
-<br>
-   <form>
-        <label>Student Name:</label>&#8287;
-        <input type="text" name='name' placeholder="Enter your Name">
-        <p style="font-size: 150%;"><b>Enter Your Marks:</b></p>
-        <label>Science:</label>&#8287;
-        <input type="number" name='Science' placeholder="Enter Science mark"><br><br>
-        <label>Maths:</label>&#8287;&#8287;
-        <input type="number" name='Maths' placeholder="Enter Maths mark"><br><br>
-        <label>English:</label>&#8287;&#8287;
-        <input type="number" name='English' placeholder="Enter English mark"><br><br>
-        <label>Social Science:</label>&#8287;&#8287;
-        <input type="number" name='SocialScience' placeholder="Enter SocialScience mark"><br><br>
-       <center><button type='sumbit' style="background-color:rgb(77, 246, 86);">SAVE</button></center>
-    </form>
-    </div>
-</body>
-</html>
+{% extends 'base.html'%} 
+
+<!-- title -->
+{% block title %} ABC: Home Page {% endblock %}
+
+{% block head %}<h1>Welcome to HOME Page</h1>{% endblock %}
+<!-- Body content -->
+{% block content %}
+    <center><h1 style="color: brown;">The School</h1>
+    <p style="color: rgb(30, 6, 136); font-size: 20px;">ABC's School aims at all-round development - academic, physical, moral and cultural of the students in order to make them mature and responsible citizens who will be ready to take their rightful place in the society.</p></center><br><br>
+    <center><h1 style="color: rgb(80, 6, 114);"><u>Admission</u></h1></center>
+<p style="color: rgb(3, 2, 8); font-size: 20px;">
+INSTRUCTIONS FOR ADMISSION<br><br>
+
+Procedure for registration: -<br><br>
+
+Go to the website www.ABCschool.org<br><br>
+
+- Go to ONLINE APPLICATION FORM FOR UKG to CLASS 9 admission 2021-22.<br>
+- Enter your Child’s Name, Date of Birth & Place (Exactly as it is in Birth Certificate)
+   and all other fields including the Aadhaar Number (ALL IN CAPITAL LETTERS).<br>
+   Requests for any change in Date of birth, after the entry, will never be accepted by the school in future.
+- Register all the details because these entries will go into admission register/ records later.<br>
+- After entering all details of a candidate, submit the form, then you will automatically get the reply in the given email provided.<br>
+- Candidates who submit applications online will be called for entrance exam ONLY IF VACANCY ARISES IN ANY CLASS.<br>
+- If online entries are incorrect, applications will be rejected.<br>
+- There is no need of any recommendation from anyone. Parents are advised not to get cheated by anyone.<br>
+- All communication to parents will be through email only from the school (admission@ABCschool.org)<br>
+        
+</p>
+{% endblock %}

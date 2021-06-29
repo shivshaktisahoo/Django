@@ -1,29 +1,14 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="en">
+{% extends 'base.html'%}
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Output - Page</title>
-    <style>
-        td { text-align : center;}
-    </style>
-</head>
+{% block title %} ABC: Output - Page {% endblock %}
 
-<body>
-   
+{% block label1 %}
+<style>
+    td { text-align : center; }
+</style>
+ {% endblock %}
     
-    <div style="background-color: rgb(247, 250, 206);">
-        <!-- both the ways we can load image -->
-        <center><img src="{% static 'images/abcschool.jpg' %}" alt="ABC School" width="150" height="150"></center>
-        <!-- <center><img src="static/images/abcschool.jpg" alt="ABC School" width="200" height="200"></center> -->
-       
-        <h1 style="color:indigo; text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;"><u>ABC SCHOOL</u></h1>
-        <br> <hr>   
-    </div>
- 
+{% block content %}
     <h2>Student name: {{name}}</h2>
     <center>
     <table class="table" border="2" cellpadding="8" bordercolor="black" bgcolor="Black" cellspacing="0" width="800" height="400" style="font-size:18px;">
@@ -42,7 +27,7 @@
 
             <tr bgcolor="lightyellow">
                 <th scope="row">{{forloop.counter}}</th>
-                <td >{{i}}</td>
+                <td>{{i}}</td>
                 <td>{{j}}</td>
 
             </tr>
@@ -73,7 +58,4 @@
     </table>
   
     </center>
-
-</body>
-
-</html>
+{% endblock %}
