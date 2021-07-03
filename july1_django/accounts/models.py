@@ -1,6 +1,7 @@
 from django.db import models
 
 # Create your models here.
+gender_list=[('male','male'),('female','female')]
 class Person(models.Model):
     first_name = models.CharField(max_length=50,default="")
     last_name = models.CharField(max_length=50,default="")
@@ -9,10 +10,11 @@ class Person(models.Model):
     email = models.EmailField(unique=True)
     desc = models.TextField()
     salary = models.FloatField()
+    gender = models.CharField(choices=gender_list,max_length=10,default="male")
     is_verify = models.BooleanField(default=False)
     
     def __str__(self):
-        return f"{self.id} | {self.first_name} {self.last_name} | {self.age} | {self.email} | {self.is_verify}"
+        return f"{self.id} | {self.first_name} {self.last_name} | {self.gender} | {self.age} | {self.email} | {self.is_verify}"
 
 class Student(models.Model):
     first_name = models.CharField(max_length=50,default="")

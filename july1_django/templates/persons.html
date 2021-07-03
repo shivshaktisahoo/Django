@@ -18,12 +18,22 @@
         <h1> List of Persons</h1>
     </center>
 
-
+    <div bgcolor="lightyellow">
+        <form>
+         <select name="status">
+             <option value="All" selected>All</option>
+             <option value='True'>True</option>
+             <option value='False'>False</option>
+         </select>&nbsp;&nbsp;&nbsp;
+         <button type='sumbit' style="background-color:rgb(77, 246, 86);">Filter</button>
+         </form>
+    </div>
     <table class="table table-striped table-hover table-condensed table-bordered table-info">
         <thead>
             <tr>
                 <th scope="col">Sl.no.</th>
                 <th scope="col">Full Name</th>
+                <th scope="col">gender</th>
                 <th scope="col">Age</th>
                 <th scope="col">Email</th>
                 <th scope="col">Salary</th>
@@ -35,6 +45,7 @@
             <tr>
                 <th scope="row">{{forloop.counter}}</th>
                 <td>{{person.first_name}} {{person.last_name}}</td>
+                <td>{{person.gender}} </td>
                 <td>{{person.age}} </td>
                 <td>{{person.email}} </td>
                 <td>{{person.salary}}</td>
@@ -44,17 +55,7 @@
         </tbody>
     </table>
 
-    <div bgcolor="lightyellow">
-           <form>
-            <label for="verify1">Verified</label>&nbsp;&nbsp;&nbsp;
-            <select name="verify">
-                <option selected>All</option>
-                <option value='True'>True</option>
-                <option value='False'>False</option>
-            </select>&nbsp;&nbsp;&nbsp;
-            <button type='sumbit' style="background-color:rgb(77, 246, 86);">OK</button>
-            </form>
-    </div>
+   
 
     <!-- Optional JavaScript; choose one of the two! -->
 
