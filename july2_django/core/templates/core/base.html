@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg="nest"></script>
+    <style>
+        a {
+            font-size: 25px;
+        }
+       
+        footer {
+
+            text-align: center;
+            top: 0;
+            width: 100%;
+            color: whitesmoke;
+            background-color: rgb(4, 75, 167);
+            padding: 6px;
+            margin-top: 3rem;
+        }
+        
+    </style>
+</head>
+<body>
+    <div style="background-color: rgb(74, 235, 246);">
+    <nav>
+        <a href="{% url 'home' %}">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'about' %}">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'classify' %}">Classification</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'regre' %}">Regression</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'contact' %}">Contact</a>&nbsp;&nbsp;&nbsp;
+    </nav>
+    </div>
+
+    <div>
+        <img src="{% static 'regression/images/aiml.jpg' %}" alt="School" width="1325" height="400">
+    </div>
+   
+    <div style="min-height:75vh;">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <footer>
+        <h4><b>
+        <u>ADDRESS:</u><br><br>
+        Park-1, New zone,<br>
+        Pochinki,<br>
+        New Delhi-760001</b>
+        </h4>
+    </footer>
+</body>
+</html>

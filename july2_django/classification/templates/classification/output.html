@@ -1,0 +1,19 @@
+{% extends 'core/base.html' %}
+
+<!-- Title  -->
+{% block title %}Output:{% endblock %}
+
+
+<!-- body content -->
+{% block content %}
+<a class='link' href="{% url 'classify' %}">Back</a>
+<center><h1 style="color:brown;"><u>Prediction on Garments Productivity</u></h1></center>
+<h2>User Inputs : </h2>
+<h2 style="color:rgb(0, 4, 255);">{{user_inputs}}</h2><br>
+
+<h2>Result :</h2><h2 style="color:rgb(0, 4, 255);">{{result}}</h2><br>
+
+
+
+
+{% endblock %}

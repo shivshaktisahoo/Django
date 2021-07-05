@@ -1,0 +1,45 @@
+{% extends 'core/base.html' %}
+
+<!-- Title  -->
+{% block title %}Regression:{% endblock %}
+
+
+
+<!-- body content -->
+{% block content %}
+<div style="background-color:rgb(246, 189, 83);">
+<center>    
+<h1>Welcome to Regression Page</h1><br>
+
+<h1 style="color:rgb(102, 47, 1);"><u>Prediction on Real Estate Price</u></h1></center>
+</div>
+<!-- # x columns is ['X2 house age', 'X3 distance to the nearest MRT station',
+    'X4 number of convenience stores', 'X5 latitude', 'X6 longitude'] -->
+
+<div style="background-color: rgb(178, 251, 94);">
+
+    <p style="font-size: 150%;"><b>Enter Values to predict:</b></p>
+    <br>
+       <form>
+            <label>X2 house age:</label>&#8287;
+            <input type="text" name='house_age' required><br><br>
+
+            <label>X3 distance to the nearest MRT station:</label>&#8287;&#8287;
+            <input type="text" name='MRT_station' required><br><br>
+
+            <label>X4 number of convenience stores:</label>&#8287;&#8287;
+            <input type="text" name='con_stores' required><br><br>
+
+            <label>X5 latitude:</label>&#8287;&#8287;
+            <input type="text" name='latitude' required><br><br>
+
+            <label>X6 longitude:</label>&#8287;&#8287;
+            <input type="text" name='longitude' required><br><br>
+
+           <center><button type='sumbit' style="background-color:rgb(225, 110, 240);">SAVE</button></center>
+        </form>
+</div>
+
+
+
+{% endblock %}

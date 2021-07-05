@@ -1,0 +1,30 @@
+{% extends 'core/base.html' %}
+
+<!-- Title  -->
+{% block title %}Contact:{% endblock %}
+
+
+<!-- body content -->
+{% block content %}
+
+<h1>Welcome to Contact Page</h1>
+
+<h3>Contact Form</h3>
+
+<div class="container">
+  <form>
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="firstname" required><br><br>
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="lastname"><br><br>
+
+    <label for="description">description</label>
+    <textarea id="description" name="description" placeholder="description" style="height:200px"></textarea><br><br>
+
+    <input type="submit" value="Submit"><br><br>
+  </form>
+</div>
+
+
+{% endblock %}

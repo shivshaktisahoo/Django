@@ -1,0 +1,65 @@
+{% extends 'core/base.html' %}
+
+<!-- Title  -->
+{% block title %}Classification:{% endblock %}
+
+
+<!-- body content -->
+{% block content %}
+<div style="background-color:rgb(246, 189, 83);">
+<center>    
+<h1>Welcome to Classification Page</h1><br>
+
+<h1 style="color:rgb(102, 47, 1);"><u>Prediction for Garments Productivity</u></h1></center>
+</div>
+<!-- # X columns is ['day', 'team', 'targeted_productivity', 
+'over_time', 'incentive','idle_time', 'idle_men', 
+'no_of_style_change', 'no_of_workers'] -->
+
+<div style="background-color: rgb(163, 155, 243);">
+
+    <p style="font-size: 150%;"><b>Enter Values to predict:</b></p>
+    <br>
+       <form>
+            <label>Day:</label>&#8287;
+            <select name="day">
+                <option value="1" selected>Saturday</option>
+                <option value="2">Sunday</option>
+                <option value="3">Monday</option>
+                <option value="4">Tuesday</option>
+                <option value="5">Wednesday</option>
+                <option value="6">Thursday</option>
+            </select><br><br>
+
+            <label>Team:</label>&#8287;
+            <input type="number" name='team' placeholder="Enter numbers of members in a team" required><br><br>
+
+            <label>Targeted Productivity (between 0 to 1):</label>&#8287;&#8287;
+            <!-- <input type="" name='targeted_productivity' placeholder="Enter targeted productivity set by the Authority"><br><br> -->
+            <input type="number" name='targeted_productivity' min="0" step="0.1" max="1"  required><br><br>
+
+            <label>Over Time (in minutes):</label>&#8287;&#8287;
+            <input type="number" name='over_time' placeholder="amount of overtime by each team " required><br><br>
+
+            <label>Incentive (in BDT):</label>&#8287;&#8287;
+            <input type="number" name='incentive' placeholder="amount of financial incentive" required><br><br>
+
+            <label>Idle Time:</label>&#8287;&#8287;
+            <input type="number" name='idle_time' placeholder="amount of idle time" required><br><br>
+
+            <label>Idle Men:</label>&#8287;&#8287;
+            <input type="number" name='idle_men' placeholder="Enter no. of idle workers" required><br><br>
+
+            <label>No. of Style Changes:</label>&#8287;&#8287;
+            <input type="number" name='no_of_style_change' placeholder="Number of changes in the style" required><br><br>
+
+            <label>No. of Workers:</label>&#8287;&#8287;
+            <input type="number" name='no_of_workers' placeholder="Number of workers in each team" required><br><br>
+
+           <center><button type='sumbit' style="background-color:rgb(77, 246, 86);">SAVE</button></center>
+        </form>
+</div>
+
+
+
+{% endblock %}
