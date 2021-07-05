@@ -24,12 +24,12 @@
         </nav>
         </div>
     <center class='text-success'>
-        <h1> Real Estate prediction List </h1>
+        <h1> Garments prediction List </h1>
     </center>
 
     <div bgcolor="lightyellow">
         <div bgcolor="lightyellow">
-            <form action="{% url 'output' %}">
+            <form action="{% url 'history' %}">
              <select name="user">
                 <option value="All" selected>All</option> 
                  {% for i in list1 %}
@@ -43,11 +43,15 @@
         <thead>
             <tr>
                 <th scope="col">Sl.no.</th>
-                <th scope="col">house_age</th>
-                <th scope="col">MRT_station</th>
-                <th scope="col">con_stores</th>
-                <th scope="col">latitude</th>
-                <th scope="col">longitude</th>
+                <th scope="col">day</th>
+                <th scope="col">team</th>
+                <th scope="col">targeted_productivity</th>
+                <th scope="col">over_time</th>
+                <th scope="col">incentive</th>
+                <th scope="col">idle_time</th>
+                <th scope="col">idle_men</th>
+                <th scope="col">no_of_style_change</th>
+                <th scope="col">no_of_workers</th>
                 <th scope="col">predicted</th>
                 
             </tr>
@@ -56,11 +60,15 @@
             {% for gc in gc_table %}
             <tr>
                 <th scope="row">{{forloop.counter}}</th>
-                <td>{{gc.house_age}}</td>
-                <td>{{gc.MRT_station}} </td>
-                <td>{{gc.con_stores}} </td>
-                <td>{{gc.latitude}} </td>
-                <td>{{gc.longitude}}</td>
+                <td>{{gc.day}}</td>
+                <td>{{gc.team}} </td>
+                <td>{{gc.targeted_productivity}} </td>
+                <td>{{gc.over_time}} </td>
+                <td>{{gc.incentive}}</td>
+                <td>{{gc.idle_time}}</td>
+                <td>{{gc.idle_men}}</td>
+                <td>{{gc.no_of_style_change}}</td>
+                <td>{{gc.no_of_workers}}</td>
                 <td>{{gc.predicted}}</td>
             </tr>
             {% endfor %}

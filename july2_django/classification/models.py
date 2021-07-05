@@ -8,8 +8,11 @@ day_list=[
     ('4','Tuesday'),
     ('5','Wednesday'),
     ('6','Thursday')]
-class Garmnentscolmn(models.Model):
-    day = models.CharField(choices=day_list,max_length=10,default="Saturday")
+pred_list = [('Medium productivity','Medium productivity'),
+        ('High productivity','High productivity')]
+class Garmnentscolmn(models.Model): 
+    username = models.CharField(max_length=40)
+    day = models.CharField(choices=day_list,max_length=20,default="Saturday")
     team = models.IntegerField(default=0)
     targeted_productivity = models.FloatField(default=0)
     over_time = models.IntegerField(default=0)
@@ -18,3 +21,5 @@ class Garmnentscolmn(models.Model):
     idle_men = models.IntegerField(default=0)
     no_of_style_change = models.IntegerField(default=0)
     no_of_workers = models.IntegerField(default=0)
+    predicted = models.CharField(choices=pred_list, max_length=40)
+    

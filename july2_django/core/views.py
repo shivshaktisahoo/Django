@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Contactinfo
 
 # Create your views here.
 
@@ -13,7 +14,8 @@ def about(request):
 def contact(request):
     try:
         data = request.GET
-        fname = data['firstname']
+        Contactinfo.objects.create(firstname=data['firstname'],
+        lastname=data['lastname'],description=data['description'])
         return render(request, 'core/home.html')
     except:
         return render(request, 'core/contact.html')

@@ -24,4 +24,5 @@ urlpatterns = [
     path('contact/', contact, name='contact'),
     path('classification/', include('classification.urls')),
     path('regression/', include('regression.urls')),
+   
 ]
