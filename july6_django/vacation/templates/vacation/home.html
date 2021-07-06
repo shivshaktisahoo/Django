@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacation</title>
+</head>
+<body>
+    <center>   
+    <div style="background-color:rgb(43, 42, 40); height: 40px; width: 50%;">
+      
+        <h1 style="color: azure;">Vacation Trip</h1><br>
+
+    </div>
+    </center>  
+    <center>
+    <div style="height: 350px; width: 50%; background-color: rgb(190, 156, 200);">
+        <br>
+        <form method="POST" style="text-align: center;">
+        {% csrf_token %}
+            {{form.as_p}}
+    
+               <center><button type='sumbit' style="background-color:rgb(248, 112, 112);">SUBMIT</button></center>
+        </form>
+    </div>
+    </center> 
+</body>
+</html>

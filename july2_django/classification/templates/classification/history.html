@@ -71,8 +71,13 @@
                 <td>{{gc.no_of_workers}}</td>
                 <td>{{gc.predicted}}</td>
             </tr>
+           
             {% endfor %}
         </tbody>
+        {% empty %}
+        <tr>
+        No data is show
+        </tr>
     </table>
 
    
