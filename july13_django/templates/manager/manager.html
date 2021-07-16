@@ -1,0 +1,47 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}Manager's Page{% endblock %}
+
+{% block bgimage %}
+<img src="{% static 'manager/images/manage.jpg' %}" alt="manage" style="width:100%;">
+{% endblock %}
+
+{% block heading %}
+<h1 style="color:rgba(5, 39, 42, 0.9);">Manager's Page</h1>
+{% endblock %}
+
+{% block list %}
+{% endblock %}
+
+{% block content2 %} 
+    <br><br>
+    <div> <center>
+    <a href="{% url 'manager:managerlist' %}"><button class="btn"><i class="fas fa-list-alt"></i> List of Managers</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="{% url 'manager:room' %}"><button class="btn"><i class="fas fa-hotel"></i> Room</button></a>&nbsp;&nbsp;<br><br>
+    </center>
+    </div>
+    <center> 
+        <br><br> 
+        <div>
+            <h1 style="font-size: 60px;">Add Managers</h1>
+        </div>
+        <div style=" width: 45%; border: 10px outset rgb(45, 165, 125); border-radius: 60px;">
+        
+            
+        <div style="background: linear-gradient(to bottom, #d7ebde 0%, #3ec38c 100%);  border-radius: 50px;">
+            <br>
+            <form method="POST"  style="text-align: center;" enctype='multipart/form-data'>
+            {% csrf_token %}
+                {{form.as_p}}
+                   
+                <br><center><button type='sumbit' style="background-color:rgb(20, 109, 82); width: 30%; border-radius: 10px; color: white">CONFIRM</button></center>
+                <br><br>
+            </form>
+        </div>
+        </div>
+    </center> 
+    
+  
+    
+{% endblock %}
