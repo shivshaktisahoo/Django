@@ -1,0 +1,93 @@
+<!doctype html>
+{% load crispy_forms_tags %}
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Create User</title>
+
+    <style>
+        .errorlist {
+            color: brown;
+        }
+
+        .helptext {
+            color: blue;
+        }
+        .form-control {
+          border-radius: 50px;
+          border: thin solid lightgray;
+        }
+        .btn {
+           background: linear-gradient(to bottom, #ffffff 0%, #05e410 100%);
+        }
+        .bcolor{
+        background: linear-gradient(to bottom, #ccffff 0%, #ffcf4b 100%);
+        }
+        </style>
+</head>
+
+<body class="bcolor">
+
+    <a href="{% url 'home' %}"><button class="btn"><i class="fa fa-home"></i> Home</button></a>&nbsp;&nbsp;
+    <center>
+    <div>
+        <h1 style="font-size: 60px;">SIGNUP</h1>
+    </div>
+    <div style=" width: 50%; border: 10px outset rgb(28, 176, 196); border-radius: 60px;">
+    
+        
+    <div style="background: linear-gradient(to bottom, #ccffff 0%, #5f98ee 100%);  border-radius: 50px;">
+        <br>
+        <form method="POST"  style="text-align: center;">
+            <!-- {% if form.errors %}
+            <div class="alert alert-error">
+                <h4>Please fix the following errors</h4>
+                <ul>
+                    {% for field in form %}
+                    {% if field.errors %}
+                    {% for error in field.errors %}
+                    <p><strong>{{ field.name }}</strong> {{ error|escape }}</p>
+                    {% endfor %}
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+                {% if form.non_field_errors %}
+                {{ form.non_field_errors }}
+                {% endif %}
+            </div>
+            {% endif %} -->
+            
+        {% csrf_token %}
+     
+            {{form.first_name|as_crispy_field}}<br>
+        
+            {{form.last_name|as_crispy_field}}<br>
+    
+            {{form.email|as_crispy_field}}<br>
+       
+            {{form.username|as_crispy_field}}<br>
+       
+            {{form.password1|as_crispy_field}}<i class="fas fa-info-circle"></i><br><br>
+        
+            {{form.password2|as_crispy_field}}<br>
+    
+
+            <br><center><button type='sumbit' style="background-color:rgb(5, 82, 117); width: 30%; border-radius: 10px; color: white">CONFIRM</button></center>
+            <br><br>
+        </form>
+    </div>
+    </div>
+</center> 
+
+
+<script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg="nest"></script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+{% extends 'home.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}Manager's Page{% endblock %}
+
+{% block bgimage %}
+<img src="{% static 'manager/images/manage.jpg' %}" alt="manage" style="width:100%;">
+{% endblock %}
+
+{% block heading %}
+<h1 style="color:rgba(5, 39, 42, 0.9);">Manager's Page</h1>
+{% endblock %}
+
+{% block list %}
+{% endblock %}
+
+{% block content2 %} 
+    <br><br>
+    <div> <center>
+    <a href="{% url 'manager:managerlist' %}"><button class="btn"><i class="fas fa-list-alt"></i> List of Managers</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="{% url 'manager:room' %}"><button class="btn"><i class="fas fa-hotel"></i> Room</button></a>&nbsp;&nbsp;<br><br>
+    </center>
+    </div>
+    <center> 
+        <br><br> 
+        <div>
+            <h1 style="font-size: 60px;">Add Managers</h1>
+        </div>
+        <div style=" width: 45%; border: 10px outset rgb(8, 151, 170); border-radius: 60px;">
+        
+            
+        <div style="background: linear-gradient(to bottom, #ccffff 0%, #5f98ee 100%);  border-radius: 50px;">
+            <br>
+            <form method="POST"  style="text-align: center;" enctype='multipart/form-data'>
+                <!-- {% if form.errors %}
+                <div class="alert alert-error">
+                    <h4>Please fix the following errors</h4>
+                    <ul>
+                        {% for field in form %}
+                        {% if field.errors %}
+                        {% for error in field.errors %}
+                        <p><strong>{{ field.name }}</strong> {{ error|escape }}</p>
+                        {% endfor %}
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                    {% if form.non_field_errors %}
+                    {{ form.non_field_errors }}
+                    {% endif %}
+                </div>
+                {% endif %} -->
+                
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-sm-6">
+                    {{form.first_name|as_crispy_field}}
+                </div>
+                <div class="col-sm-6">
+                    {{form.last_name|as_crispy_field}}<br>
+                </div>
+                
+            </div>
+            {{form.photo|as_crispy_field}}<br>
+            <div class="row">
+                <div class="col-sm-4">
+                {{form.age|as_crispy_field}}
+            </div>
+                <div class="col-sm-8">
+                    {{form.contactno|as_crispy_field}}<br>
+                </div>
+                
+            </div>
+           
+            
+            {{form.email|as_crispy_field}}<br>
+            <!-- {{form.contactno|as_crispy_field}}<br> -->
+            
+            {{form.room|as_crispy_field}}<br>
+                <br><center><button type='sumbit' style="background-color:rgb(5, 82, 117); width: 30%; border-radius: 10px; color: white">CONFIRM</button></center>
+                <br><br>
+            </form>
+        </div>
+        </div>
+    </center> 
+    
+  
+    
+{% endblock %}

@@ -1,0 +1,71 @@
+{% extends 'home.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}Customer's Page{% endblock %}
+
+{% block bgimage %}
+<img src="{% static 'customer/images/customer.jpg' %}" alt="customer" style="width:100%; height: 600px;">
+{% endblock %}
+
+{% block heading %}
+<h1 style="color:rgba(53, 223, 238, 0.9);">Customer's Page</h1>
+{% endblock %}
+
+{% block list %}
+{% endblock %}
+
+{% block content2 %} 
+    <br><br>
+    <div><center>
+    <a href="{% url 'customer:customerlist' %}"><button class="btn"><i class="fas fa-list-alt"></i> List of Customers</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="{% url 'manager:room' %}"><button class="btn"><i class="fas fa-hotel"></i> Room</button></a>&nbsp;&nbsp;<br><br></center>
+    </div>
+    <br><br>
+    <center>  
+        <div>
+            <h1 style="font-size: 50px;">Add Customers</h1>
+        </div>
+        <div style=" width: 45%; border: 10px outset rgb(45, 165, 125); border-radius: 60px;">
+        
+            
+        <div style="background: linear-gradient(to bottom, #d7ebde 0%, #3ec38c 100%);  border-radius: 50px;">
+            <br>
+            <form method="POST"  style="text-align: center;" enctype='multipart/form-data'>
+
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-sm-6">
+                    {{form.first_name|as_crispy_field}}
+                </div>
+                <div class="col-sm-6">
+                    {{form.last_name|as_crispy_field}}<br>
+                </div>
+                
+            </div>
+            {{form.photo|as_crispy_field}}<br>
+            <div class="row">
+                <div class="col-sm-4">
+                {{form.age|as_crispy_field}}
+            </div>
+                <div class="col-sm-8">
+                    {{form.contactno|as_crispy_field}}<br>
+                </div>
+                
+            </div>
+         
+            
+            {{form.email|as_crispy_field}}<br>
+            <!-- {{form.contactno|as_crispy_field}}<br> -->
+            
+                <br><center><button type='sumbit' style="background-color:rgb(20, 109, 82); width: 30%; border-radius: 10px; color: white">CONFIRM</button></center>
+                <br><br>
+                
+            </form>
+        </div>
+        </div>
+    </center> 
+
+    
+
+{% endblock %}
